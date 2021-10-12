@@ -63,6 +63,15 @@ while(restartGame){
       guess = parseInt(prompt(`Please enter a number from 1 to ${rangeNum}`));
     }
 
+    // Removes an attempt
+    attempts--;
+
+    // Checks if the user guessed correctly. If so, the game ends (note: The break ends the loop)
+    if (guess === randomNum){
+        alert(`Congrats! You guuessed the correct number: ${randomNum}`);
+        break;
+    }
+
     break;
   }
 
