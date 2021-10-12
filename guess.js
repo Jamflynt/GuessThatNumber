@@ -33,6 +33,12 @@ while(restartGame){
     // Using parseInt to attempt to convert the user's response into a number value (note: the value returned from a prompt is a string value. Also, if the value cannot be converted then the value returned will be NaN (not a number))
     rangeNum = parseInt(rangeNum);
 
+    // Verifies the user's entry for the range number is a number greater than zero (note: NaN has a default boolean value of false. Also, all numbers, positive and negative, have a default boolean value of true, except for zero which has a default boolean value of false.)
+    while (!rangeNum || rangeNum < 1){
+        rangeNum = prompt(enterNumText);
+        rangeNum = parseInt(rangeNum);
+    }
+
     break;
 }
 
