@@ -75,12 +75,12 @@ while(restartGame){
     } else if (attempts === 0){
         alert(`Sorry, but you have run out of attempts :( The number was ${randomNum}`);
         break;
-    // 
+    // Checks if user's guess was too low and prompts user to guess again if that is the case
     } else if (guess < randomNum){
         guess = prompt(`To low. You have ${attempts} attempt(s) left`);
+    } else {
+        guess = prompt(`Too high. You have ${attempts} attempt(s) left`);
     }
-
-    break;
   }
 
     break;
