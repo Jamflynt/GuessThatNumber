@@ -26,8 +26,9 @@ while(restartGame){
     let attempts = 0;
     // Changed above
 
-    // After the above you just gotta change the 
+    // After the above you just gotta change the variables where you need to
 
+    // And change this to read the input of the variable ceiling.
     while (!attempt_ceiling || attempt_ceiling < 1){
         attempt_ceiling = parseInt(prompt(enterNumText));
     }
