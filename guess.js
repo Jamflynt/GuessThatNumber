@@ -44,6 +44,7 @@ while(restartGame){
 
     // Prompts user to enter a number of attempt allowed (aka Number of guesses). Also, attempting to convert their response into a number value.
     attempts = parseInt(prompt(`Please enter a number of attempts allowed:`));
+    // Added due to student question (Dulce)
     const original_attempts = attempts;
 
     // Verifies the user's entry for a number of attempts allowed is a number greater than zero
