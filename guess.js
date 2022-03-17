@@ -44,6 +44,7 @@ while(restartGame){
 
     // Prompts user to enter a number of attempt allowed (aka Number of guesses). Also, attempting to convert their response into a number value.
     attempts = parseInt(prompt(`Please enter a number of attempts allowed:`));
+    const original_attempts = attempts;
 
     // Verifies the user's entry for a number of attempts allowed is a number greater than zero
     while (!attempts || attempts < 1){
@@ -51,7 +52,7 @@ while(restartGame){
     }
 
     // Asks user to enter a guess in the range that they set. 
-    guess = prompt(`Please enter a guess from 1 to ${rangeNum}. You have ${attempts} attempt(s) left:`)
+    guess = prompt(`Please enter a guess from 1 to ${rangeNum}. You have ${attempts} attempt(s) left of ${original_attempts}:`)
 
       // Continues looping until the user guesses the correct number or runs out of attempts (NOTE: Loops until a BREAK keyword is run)
   while (true){
@@ -82,9 +83,9 @@ while(restartGame){
         break;
     // Checks if user's guess was too low and prompts user to guess again if that is the case
     } else if (guess < randomNum){
-        guess = prompt(`To low. You have ${attempts} attempt(s) left`);
+        guess = prompt(`To low. You have ${attempts} attempt(s) left of ${original_attempts}:`);
     } else {
-        guess = prompt(`Too high. You have ${attempts} attempt(s) left`);
+        guess = prompt(`Too high. You have ${attempts} attempt(s) left of ${original_attempts}:`);
     }
   }
 
